@@ -6,7 +6,7 @@ else
 endif
 
 # Define variables for directory paths and build types
-TCC_DIR    := tcc-65816
+TCC_DIR    := tcc
 WLA_DIR    := wla-dx
 BIN_DIR    := ../devkitsnes/bin
 
@@ -72,6 +72,9 @@ wla-install:
 # update the submodule to the last commit
 wla-update:
 	git submodule update --remote --merge wla-dx
+
+tcc-update:
+	git submodule update --remote --merge tcc
 
 # Define phony targets
 .PHONY: all clean install tcc-configure tcc wla
